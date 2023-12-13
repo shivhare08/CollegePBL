@@ -16,7 +16,7 @@
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
     font-size: 19px;
-    color: dimgray;
+    color: rgb(12, 11, 11);
     /* padding-left: 12%; */
 }
 .navbar-nav li{
@@ -53,3 +53,97 @@
 	/* border-left:2px solid rgb(7, 7, 7) ; */
 }
 
+.moredepartment h3{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(51, 26, 71);
+}
+
+.moredepartment h5{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(182, 77, 77);
+}
+
+.backgroundcontact{
+    background: url('../image/contactbg.jpg');
+    width: 100%;
+    height: 620px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.backgroundcontact label{
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    padding-left: 5%;
+}
+.backgroundcontact input{
+    background-color: rgba(245, 245, 245, 0.144);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin: 0% 0% 0% 5%;
+    width: 90%;
+    color: whitesmoke;
+}
+
+.backgroundcontact input::placeholder{
+    color: rgb(218, 208, 208);
+}
+.backgroundcontact textarea::placeholder{
+    color: white;
+}
+
+.backgroundcontact button{
+    margin: 0% 0% 0% 5%;
+}
+
+.backgroundcontact textarea{
+    margin: 0% 0% 0% 5%;
+    width: 90%;
+    background-color: rgba(245, 245, 245, 0.144);
+}
+
+.homeboder h6{
+    color: blue;
+}
+
+.homecarousel img{
+    width: 100%;
+    height: 500px;
+    
+}
+
+.about h5{
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    /* padding-bottom: 12%; */
+}
+.about h1{
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    /* padding-bottom: 15%; */
+}
+
+.allLogin .col-md-4{
+    transition: transform .5s;
+}
+
+.allLogin .col-md-4:hover {
+	transform: scale(1.09); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    background-color: bisque;
+	/* border-bottom: 2px solid red;
+    color: crimson; */
+	/* border-left:2px solid rgb(7, 7, 7) ; */
+}
+
+.allLogin h3{
+    color: rgb(92, 95, 41);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.loginall{
+    color: rgb(92, 95, 41);
+    font-family: 'Times New Roman', Times, serif;
+}

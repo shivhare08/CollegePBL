@@ -1,9 +1,42 @@
 <%- include('../layouts/header.ejs') %>
 
-<section class="contact">
-    <div class="container">
-        <div class="row">
-            <form action="/contactfill" method="POST">
+  <section class="contact">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="backgroundcontact">
+          
+            <div class="col-md-7 contatbox" style="margin: 10% 0% 0% 20%; background-color: #343a407d;">
+              <form action="/contactfill" method="POST">
+
+                <div class="mb-3">
+                  <label class="form-label">Name</label>
+                  <input name="name" placeholder="name" type="text" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Email address</label>
+                  <input name="email" placeholder="email" type="email" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Reason</label>
+                  <input name="reason" type="text" placeholder="reason" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Message</label>
+                  <textarea name="message" cols="8" placeholder="message" class="form-control"></textarea>
+                  <!-- <input name="message" type="text" class="form-control"> -->
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form><br>
+          
+        </div>
+      
+
+      </div>
+      <!-- <form action="/contactfill" method="POST">
 
                 <div class="mb-3">
                     <label class="form-label">Name</label>
@@ -26,9 +59,9 @@
                   </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-        </div>
+            </form> -->
     </div>
-</section>
+    </div>
+  </section>
 
-<%- include('../layouts/footer.ejs') %>
+  <%- include('../layouts/footer.ejs') %>

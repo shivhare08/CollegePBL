@@ -9,7 +9,7 @@ class FrontController{
 
     static About = async(req,res)=>{
         try{
-            res.render('frontend/home.ejs')
+            res.render('frontend/about.ejs')
         }catch(error){
             console.log(error);
         }
@@ -25,7 +25,15 @@ class FrontController{
 
     static Department = async(req,res)=>{
         try{
-            res.render('frontend/home.ejs')
+            res.render('frontend/department.ejs')
+        }catch(error){
+            console.log(error);
+        }
+    }
+
+    static  MoreDepartment = async(req,res)=>{
+        try{
+            res.render('extrafeilds/moredepartment.ejs')
         }catch(error){
             console.log(error);
         }
@@ -33,7 +41,15 @@ class FrontController{
 
     static SmartCollege = async(req,res)=>{
         try{
-            res.render('frontend/home.ejs')
+            res.render('frontend/smartcollege.ejs')
+        }catch(error){
+            console.log(error);
+        }
+    }
+
+    static LoginAll = async(req,res)=>{
+        try{
+            res.render('frontend/loginallpage.ejs')
         }catch(error){
             console.log(error);
         }
@@ -41,7 +57,7 @@ class FrontController{
 
     static StudentLogin = async(req,res)=>{
         try{
-            res.render('frontend/home.ejs')
+            res.render('frontend/studentlogin.ejs')
         }catch(error){
             console.log(error);
         }
