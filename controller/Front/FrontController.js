@@ -49,7 +49,15 @@ class FrontController{
 
     static LoginAll = async(req,res)=>{
         try{
-            res.render('frontend/loginallpage.ejs')
+            res.render('frontend/loginallpage.ejs',{message : req.flash('studenterror') , successregister : req.flash('successregister')})
+        }catch(error){
+            console.log(error);
+        }
+    }
+
+    static RegisterAll = async(req,res)=>{
+        try{
+            res.render('frontend/registerallpage.ejs',{messageregister : req.flash('errorregister') , email : req.flash('email')} )
         }catch(error){
             console.log(error);
         }

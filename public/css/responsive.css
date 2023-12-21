@@ -77,6 +77,9 @@
 	.about h1{
 		font-size: 20px!important;
 	}
+	.homeboder p{
+		font-size: 13px;
+	}
 }
 @media(max-width : 423px){
 	.about h5{
@@ -89,6 +92,9 @@
 	}
 	.carousel-item img{
 		margin-top: 11%!important;
+	}
+	.homeboder p{
+		font-size: 10px;
 	}
 }
 

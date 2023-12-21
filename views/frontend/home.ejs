@@ -1,95 +1,221 @@
 <%- include("../layouts/header.ejs") %>
+
+    <div class="container-fluid">
+        <div id="carouselExampleIndicators" data-bs-ride="carousel" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner home">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="image/home4.jpg" class="d-block">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="image/home1.jpg" class="d-block">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="image/home2.jpg" class="d-block">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid">
         <div class="row">
             <div class="bg-light">
-                <div style="margin-top: 6%;" class="homeboder border border-danger-subtle">
+                <div class="homeboder ">
                     <h4 class="pt-3" style="padding-left: 3%;">Important links</h4>
                     <ul>
+                        <li>
+                            <a class="" href="">
+                                <p>You can add more positi position values by adding entries to the $positionon values
+                                    by adding entries to the $position-values Sass map variable.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="" href="">
+                                <p>You can add mo position values by adding entries to the $positionre position values
+                                    by adding entries to the $position-values Sass map variable.</p>
+                            </a>
+                        </li>
                         <marquee loop="" class="mt-2 marq bg-light " style="height: 10%;" direction="scroll" loop="">
                             <ul>
                                 <li>
                                     <a class="text-danger" href="">
-                                        <h6 class="text-danger"> position values by adding entries to the $positionYou
+                                        <p class="text-danger"> position values by adding entries to the $positionYou
                                             can add more position values by adding entries to the $position-values Sass
-                                            map variable.</h6>
+                                            map variable.</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="text-danger" href="">
-                                        <h6 class="text-danger">You can add more positi position values by adding
+                                        <p class="text-danger">You can add more positi position values by adding
                                             entries to the $positionon values by adding entries to the $position-values
-                                            Sass map variable.</h6>
+                                            Sass map variable.</p>
                                     </a>
                                 </li>
                             </ul>
                         </marquee>
-                        <li>
-                            <a class="" href="">
-                                <h6> position values by adding entries to the $positionYou can add more position values
-                                    by adding entries to the $position-values Sass map variable.</h6>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="" href="">
-                                <h6>You can add more positi position values by adding entries to the $positionon values
-                                    by adding entries to the $position-values Sass map variable.</h6>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="" href="">
-                                <h6>You can add mo position values by adding entries to the $positionre position values
-                                    by adding entries to the $position-values Sass map variable.</h6>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="" href="">
-                                <h6>You can position values by adding entries to the $position add more position values
-                                    by adding entries to the $position-values Sass map variable.</h6>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="" href="">
-                                <h6>You can add more position values position values by adding entries to the
-                                    $positionby adding entries to the $position-values Sass map variable.</h6>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="" href="">
-                                <h6>You can add more position values by adding entries to the $position-values Sass map
-                                    variable.</h6>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="" href="">
-                                <h6>You can add more position val position values by adding entries to the $positionues
-                                    by adding entries to the $position-values Sass map variable.</h6>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
-        <div class="carousel-inner">
-          <div class="carousel-item active homecarousel">
-            <img src="image/contactbg.jpg" class="d-block" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="image/contactbg.jpg" class="d-block" alt="...">
-          </div>
+    <div class="container smallbox">
+        <div class="row">
+            <div class="col-md-4 shadow-lg mt-1">
+                <center>
+                    <br><br>
+                    <h4> <sapn class="text-danger"><i class="fa-solid fa-wifi"></i></sapn> <br>
+                    Network
+                    </h4>
+                    <br><br>
+                </center>
+            </div>
+            <div class="col-md-4 mt-1">
+                <br><br>
+                <center><h4><sapn class="text-danger"><i class="fa-solid fa-building-columns"></i></sapn> <br>
+                    Campus
+                    </h4></center>
+                    <br><br>
+            </div>
+            <div class="col-md-4 shadow-lg mt-1">
+                <br><br>
+                <center><h4><sapn class="text-danger"><i class="fa-solid fa-chalkboard-user"></i></sapn> <br>
+                    Faculty
+                    </h4></center>
+                    <br><br>
+            </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+    </div>
 
-<%- include('../layouts/footer.ejs') %>
+    <div class="container collegebox mt-5">
+        <div class="row">
+            <h2 class="text-light" style="font-family: 'Times New Roman', Times, serif;">Our<span class="text-light"> Alumni</span></h2>
+            <div class="col-md-3 col-6 shadow-lg mt-1" style="background-color: #ffc107bd;">
+                <div class="card">
+                    <img src="image/alumni.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-danger">Miss Cathrina</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="card-link">About them</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6 shadow-lg mt-1" style="background-color: #ffc107bd;">
+                <div class="card">
+                    <img src="image/alumni4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-danger">Ed root</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="card-link">About them</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6 shadow-lg mt-1" style="background-color: #dc3545bd;">
+                <div class="card">
+                    <img src="image/home1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-danger">English geouge</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="card-link">About them</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6 shadow-lg mt-1" style="background-color: #ffc107bd;">
+                <div class="card">
+                    <img src="image/home.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-danger">Stiphine</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="card-link">About them</a>
+                    </div>
+                    
+                  </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container collegebox mt-5">
+        <div class="row">
+            <div class="col-md-3 col-6 shadow-lg mt-1" style="background-color: #dc3545bd;">
+                <div class="card">
+                    <img src="image/alumni3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-danger">Alexandra</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="card-link">About them</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6 shadow-lg mt-1" style="background-color: #ffc107bd;">
+                <div class="card">
+                    <img src="image/alumni4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-danger">Ed root</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="card-link">About them</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6 shadow-lg mt-1" style="background-color: #ffc107bd;">
+                <div class="card">
+                    <img src="image/alumni.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-danger">Miss Cathrina</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="card-link">About them</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-6 shadow-lg mt-1" style="background-color: #dc3545bd;">
+                <div class="card">
+                    <img src="image/alumni2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title text-danger">George & millan</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="card-link">About them</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="borleft container-fluid">
+        <div class="row  rounded-end shadow-lg">
+            
+            <p class="">Contrary to popular belief,t has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,</p>
+        </div>
+    </div>
+ 
+    <div class="borright container mt-2">
+        <div class="row  rounded-start shadow-lg">
+            
+            <p class="">Contrary not simply randomliterature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,</p>
+        </div>
+    </div>
+
+    <div class="borleft container-fluid mt-2">
+        <div class="row  rounded-end shadow-lg">
+            
+            <p class="">Contrary to popular belief, Itsical Latin literature from 45 BC, . Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,</p>
+        </div>
+    </div>
+ 
+    <div class="borright container mt-2">
+        <div class="row  rounded-start shadow-lg">
+            
+            <p class="">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. College in Virginia,</p>
+        </div>
+    </div>
+
+    
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <%- include('../layouts/footer.ejs') %>
