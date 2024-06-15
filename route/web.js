@@ -4,6 +4,8 @@ const ContactController = require('../controller/Contact/ContactController')
 const DepartmentController = require('../controller/Department/DepartmentController.js')
 const AdminController = require('../controller/Admin/AdminController')
 const StudentController = require('../controller/Student/StudentController')
+const InstructorController = require('../controller/Instructor/InstructorController')
+const auth = require('../middleware/auth')
 const router = express.Router()
 
 
@@ -13,13 +15,12 @@ router.get('/about',FrontController.About)
 router.get('/department',FrontController.Department)
 router.get('/contact',FrontController.Contact)
 router.get('/smartollege',FrontController.SmartCollege)
-router.get('/loginallpage',FrontController.LoginAll)
-router.get('/registerallpage',FrontController.RegisterAll)
 router.get('/studentlogin',FrontController.StudentLogin)
 router.get('/instructorlogin',FrontController.InstructorLogin)
 router.get('/adminlogin',FrontController.AdminLogin)
-router.get('/studentregister',FrontController.StudentLogin)
+router.get('/studentregister',FrontController.StudentRegister)
 router.get('/instructorregister',FrontController.InstructorRegister)
+router.get('/instructorDashboard',FrontController.InstructorDashboard)
 router.get('/adminregister',FrontController.AdminRegister)
 
 //=======================EXTRAFEILDS================\\
@@ -46,7 +47,8 @@ router.get('/travelManagement',DepartmentController.TravelManagement)
 router.get('/zoology',DepartmentController.Zoology)
 
 
-
+//studentdashboard
+router.get('/studentdashboard',StudentController.StudentDashboard)
 
 //contactdynamic
 router.post('/contactfill',ContactController.Contactitem)
@@ -55,9 +57,11 @@ router.post('/contactfill',ContactController.Contactitem)
 router.post('/studentregister',StudentController.StudentRegister)
 router.post('/studentlogin',StudentController.StudentLogin)
 
+//instructorregisterdynamic
+router.post('/instructorregister',InstructorController.InstructorRegister)
+router.post('/instructorlogin',InstructorController.InstructoreLogin)
 
-//studentdashboard
-router.get('/studentdashboard',StudentController.StudentDashboard)
+
 
 
 

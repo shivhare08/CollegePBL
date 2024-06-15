@@ -5,20 +5,24 @@ const jwt = require('jsonwebtoken')
 class StudentController{
     static StudentDashboard = async(req,res)=>{
         try{
-            res.render('studentDashboard/StudentDashboard.ejs')
+            const {name,email,gender} = req.body
+            const data = await studentModel.find()
+            res.render('studentDashboard/StudentDashboard.ejs',{data:data })
         }catch(err){
             console.log(err)
         }
     }
 
+    
+
     static StudentRegister  = async(req,res)=>{
         try{
-            const {name,email,phone,category,address,gender,password,state,pincode,city,studentconfpassword} = req.body
+            const {name,email,phone,course,category,address,gender,password,state,pincode,city,studentconfpassword} = req.body
             if(name && email && phone && category && address && gender && password && state && pincode && city && studentconfpassword){
                 const emaildata = await studentModel.findOne({email:email})
                     if(emaildata){
-                        req.flash('email','email already exist')
-                        res.redirect('/registerallpage')
+                        req.flash('errorregister','email already exist')
+                        res.redirect('/studentregister')
                     }else{
                         if(password.length >= 8){
                             if(password == studentconfpassword ){
@@ -27,6 +31,7 @@ class StudentController{
                                     name:name,
                                     email:email,
                                     phone:phone,
+                                    course:course,
                                     gender:gender,
                                     category:category,
                                     state:state,
@@ -38,19 +43,19 @@ class StudentController{
                                 })
                                 await studentdata.save()
                                 req.flash('successregister','Registeration successful now Login')
-                                res.redirect('/loginallpage')
+                                res.redirect('/studentlogin')
                             }else{
                                 req.flash('errorregister','Password and confirm password are not match')
-                                res.redirect('/registerallpage')
+                                res.redirect('/studentregister')
                             }
                         }else{
                             req.flash('errorregister','password must have at least 8 character')
-                            res.redirect('/registerallpage')
+                            res.redirect('/studentregister')
                         }
                     }
             }else{
                 req.flash('errorregister','All feilds are required')
-                res.redirect('/registerallpage')
+                res.redirect('/studentregister')
             }
         }catch(error){
             console.log(error);
@@ -70,15 +75,15 @@ class StudentController{
                         res.redirect('/studentdashboard')
                     }else{
                         req.flash('studenterror','invalid admin')
-                        res.redirect('/loginallpage')
+                        res.redirect('/studentlogin')
                     }
                 }else{
                     req.flash("studenterror","you are not exist")
-                    res.redirect('/loginallpage')
+                    res.redirect('/studentlogin')
                 }
             }else{
                 req.flash("studenterror","All feilds are required")
-                res.redirect('/loginallpage')
+                res.redirect('/studentlogin')
             }
         }catch(err){
             console.log(err)

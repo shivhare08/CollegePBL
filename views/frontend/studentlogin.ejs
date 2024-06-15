@@ -1,0 +1,45 @@
+<%- include('../layouts/header.ejs')%>
+<br><br><br><br>
+    <div class="container mt-3">
+        <h3 class="text-center loginall">Welcome to the <span class="text-danger">Login</span> Page<br>
+            <span style="font-size: 18px;">
+                <a class="" href="/instructorlogin">Instructor Login</a> | <a class="" href="/adminlogin">Admin Login</a>
+            </span></h3>
+        
+        <div class="row allLogin">
+            <div class="col-md-4 mt-3 "></div>
+            
+            <div class="col-md-4 mt-3 shadow-lg ">
+                <br>
+                <h3><i class="fa-solid fa-school"></i> Student <span class="text-danger">Login</span></h3>
+                <% if(message.length > 0){ %>
+                    <div class="alert alert-danger" style="font-family:'Courier New', Courier, monospace">
+                        <%= message %>
+                    </div>                            
+                <% } %>
+                <% if(successlogin.length > 0){ %>
+                    <div class="alert alert-success" style="font-family:'Courier New', Courier, monospace">
+                        <%= successlogin %>
+                    </div>                            
+                <% } %>
+                <form action="/studentlogin" method="POST">
+
+                    <div class="mb-3">
+                        <label class="form-label">Email address</label>
+                        <input name="email" placeholder="email" type="email" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input name="password" type="password" placeholder="Password" class="form-control">
+                    </div>
+
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                    <br><br>
+                </form>
+            </div>
+            
+            <div class="col-md-4 mt-3"></div>
+        </div>
+    </div><br><br>
+    <%- include('../layouts/footer.ejs') %>

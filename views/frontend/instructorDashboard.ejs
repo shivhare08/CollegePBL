@@ -1,0 +1,54 @@
+<%- include('../layouts/header.ejs') %>
+<br><br>
+<div class="container bg-dark mt-5">
+    <div class="row">
+        <h5 class="text-center text-light">Student details and their course</h5>
+        <table class="table table-bordered table-responsive">
+            <thead class="text-center">               
+                <tr>
+                    <th style="background: whitesmoke; font-family: serif;">S.no</th>
+
+                    <th style="background: whitesmoke; font-family: serif;">Name</th>
+                    
+                    <th style="background: whitesmoke; font-family: serif;">Course</th>
+
+                    <th  style="background: whitesmoke; font-family: serif;">Email</th>
+        
+                    <th style="background:  whitesmoke;  font-family: serif;">Gender</th> 
+
+                    <th style="background:  whitesmoke;  font-family: serif;">Category</th>
+                    
+                    <th style="background:  whitesmoke;  font-family: serif;">City</th>  
+
+                    <th style="background:  whitesmoke;  font-family: serif;">State</th> 
+                        
+                </tr>
+            </thead>
+        
+            <% studentdata.forEach((item)=>{ %>
+                <tbody class="text-center">
+                    <tr>                       
+                        <td class="bg-light align-middle  shadow-lg" style="color:#607D8A ;">-></h6></td>
+                        
+                        <td class="bg-light align-middle  shadow-lg" style="color:#607D8A ;"><h6><%=  item.name %></h6></td>                              
+                        
+                        <td class="align-middle bg-light shadow-lg" style="color:#607D8A ;"><h6><%= item.course %></h6></td>
+        
+                        <td class="bg-light align-middle  shadow-lg" style="color:#607D8A ;"><h6><%=  item.email %></h6></td>
+        
+                        <td class="align-middle bg-light shadow-lg" style="color:#607D8A ;"><h6><%= item.gender %></h6></td>   
+                        
+                        <td class="align-middle bg-light shadow-lg" style="color:#607D8A ;"><h6><%= item.category %></h6></td>
+        
+                        <td class="bg-light align-middle  shadow-lg" style="color:#607D8A ;"><h6><%=  item.city %></h6></td>
+        
+                        <td class="align-middle bg-light shadow-lg" style="color:#607D8A ;"><h6><%= item.state %></h6></td> 
+                    </tr>                    
+                </tbody> 
+            <% }) %>                
+        </table> 
+        
+    </div>
+</div>
+<br><br><br><br><br>
+<%- include('../layouts/footer.ejs') %>

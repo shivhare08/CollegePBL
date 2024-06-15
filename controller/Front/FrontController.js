@@ -1,3 +1,6 @@
+const studentModel = require('../../model/student')
+const instructorModel = require('../../model/instructor')
+
 class FrontController{
     static Home = async(req,res)=>{
         try{
@@ -41,31 +44,17 @@ class FrontController{
 
     static SmartCollege = async(req,res)=>{
         try{
+            // console.log(data)
             res.render('frontend/smartcollege.ejs')
         }catch(error){
             console.log(error);
         }
     }
 
-    static LoginAll = async(req,res)=>{
-        try{
-            res.render('frontend/loginallpage.ejs',{message : req.flash('studenterror') , successregister : req.flash('successregister')})
-        }catch(error){
-            console.log(error);
-        }
-    }
-
-    static RegisterAll = async(req,res)=>{
-        try{
-            res.render('frontend/registerallpage.ejs',{messageregister : req.flash('errorregister') , email : req.flash('email')} )
-        }catch(error){
-            console.log(error);
-        }
-    }
 
     static StudentLogin = async(req,res)=>{
         try{
-            res.render('frontend/studentlogin.ejs')
+            res.render('frontend/studentlogin.ejs',{message : req.flash('studenterror') , successlogin : req.flash('success')})
         }catch(error){
             console.log(error);
         }
@@ -73,7 +62,7 @@ class FrontController{
 
     static InstructorLogin = async(req,res)=>{
         try{
-            res.render('frontend/home.ejs')
+            res.render('frontend/instructorlogin.ejs',{instructorsuccessmsg : req.flash('successregister')})
         }catch(error){
             console.log(error);
         }
@@ -81,15 +70,15 @@ class FrontController{
 
     static AdminLogin = async(req,res)=>{
         try{
-            res.render('frontend/home.ejs')
+            res.render('frontend/adminlogin.ejs')
         }catch(error){
             console.log(error);
         }
     }
 
-    static Register = async(req,res)=>{
+    static  StudentRegister = async(req,res)=>{
         try{
-            res.render('frontend/home.ejs')
+            res.render('frontend/studentregister.ejs',{error : req.flash('errorregister')} )
         }catch(error){
             console.log(error);
         }
@@ -97,7 +86,7 @@ class FrontController{
 
     static AdminRegister = async(req,res)=>{
         try{
-            res.render('frontend/home.ejs')
+            res.render('frontend/adminregister.ejs')
         }catch(error){
             console.log(error);
         }
@@ -105,7 +94,17 @@ class FrontController{
 
     static InstructorRegister = async(req,res)=>{
         try{
-            res.render('frontend/home.ejs')
+            res.render('frontend/instructorregister.ejs')
+        }catch(error){
+            console.log(error);
+        }
+    }
+
+    static InstructorDashboard = async(req,res)=>{
+        try{
+            const data = await instructorModel.find()
+            const studentdata = await studentModel.find().sort({_id:-1})
+            res.render('frontend/instructorDashboard.ejs',{studentdata : studentdata})
         }catch(error){
             console.log(error);
         }
